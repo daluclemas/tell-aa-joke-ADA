@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./app.js" defer></script>
+    <title>Tell a Joke</title>
+  </head>
+  <body>
+    <main
+      class="w-90 min-vh-100 d-flex justify-content-center align-items-center mx-auto"
+    >
+      <section class="w-100 h-100">
+        <!-- image -->
+        <div class="img-size overflow-hidden mx-auto mb-4">
+          <img
+            src="https://pic.chinesefontdesign.com/uploads/2017/09/chinesefontdesign.com-2017-09-10_06-23-22_597945.gif"
+            alt="gif"
+            class="w-100 h-100 img"
+          />
+        </div>
+
+        <!-- tell a joke button -->
+        <div
+          class="btn-size bg-primary mx-auto rounded-2 overflow-hidden mb-3 tell-joke"
+        >
+          <button
+            class="bg-transparent btn rounded-0 border-0 text-capitalize w-100 h-100 text-white joke-btn"
+          >
+            Tell me a joke
+          </button>
+        </div>
+
+        <div class="spinner-wrapper mx-auto">
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden mx-auto">Loading...</span>
+          </div>
+        </div>
+
+        <!-- show joke -->
+        <p class="joke-text text-center w-100 fs-3"></p>
+
+        <!-- punchline -->
+        <div
+          class="btn-size bg-success mx-auto rounded-2 overflow-hidden mb-3 punchline-wrapper"
+        >
+          <button
+            class="bg-transparent btn rounded-0 border-0 text-capitalize w-100 h-100 text-white punchline-btn"
+          >
+            punchline
+          </button>
+        </div>
+
+        <!-- show puncline -->
+        <p class="punchline-text text-center w-100 fs-3"></p>
+
+        <div class="prompt-wrapper rounded-2 border border-danger-subtle">
+          <div class="prompt-text">
+            <p class="text-center fs-5">Bet you wanna hear another one.</p>
+          </div>
+
+          <div
+            class="btn-size bg-danger mx-auto rounded-2 overflow-hidden mb-3 reset"
+          >
+            <button
+              class="bg-transparent btn rounded-0 border-0 text-capitalize w-100 h-100 text-white reset-btn"
+            >
+              sure, hit me!
+            </button>
+          </div>
+        </div>
+
+        <!-- reset -->
+
+        <div class="toast-container position-fixed top-0 end-0 p-3 text-white">
+          <div
+            id="liveToast"
+            class="toast bg-danger"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header d-flex justify-content-end bg-danger">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="toast-body">Hello, world! This is a toast message.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
